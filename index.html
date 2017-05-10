@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app='ListTracksApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="appl.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Music</title>
+  </head>
+  <body>
+    <h1>Music Tracks</h1>
+
+    <div ng-controller='MusicController'>
+      <h3>Music Tracks</h3>
+        <div ng-repeat="track in list.tracks" class="trackInfo">
+        		<span id="trackName" style="font-size: 32px;">{{ track.title }}</span>
+        		<div class="trackGenre" ng-repeat="genre in track.genres">{{ genre.name }}</div>
+        		<div class="rating">{{ track.rating }}</div>
+          
+        </div>
+    </div>
+
+  </body>
+</html>
